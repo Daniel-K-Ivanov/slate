@@ -2,9 +2,7 @@
 title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - ruby
-  - python
+  - curl
   - javascript
 
 toc_footers:
@@ -19,33 +17,18 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+In order to use LimePay service, one would need to contact LimePay's on-boarding team at [hi@limepay.io](mailto:hi@limepay.io).
+This document aims to provide information on how you can use LimePay to process Ethereum transactions through fiat card payments.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+# Organization
 
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Every LimePay customer has its own organization. It is used as a domain in which all of your settings, entities and data belong to. Once you have been on-boarded by LimePay's team, your organisation will be created.
 
-# Authentication
+Escrow Smart Contract 
+The escrow smart contract holding the funds for the future payments is being deployed as part of your on-boarding process. Information on what should be configured in the contract and the source code of it you can find [here](https://github.com/LimePay/smart-contracts). 
+___
 
 > To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
 
 ```javascript
 const kittn = require('kittn');
